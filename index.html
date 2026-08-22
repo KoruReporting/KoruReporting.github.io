@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koru Reporting — Measure. Understand. Communicate.</title>
+  <title>Koru Reporting — CA SB 253 &amp; SB 261 Climate Disclosure Compliance</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -98,6 +98,14 @@
     }
 
     .nav-links a:hover { color: var(--white); }
+
+    .nav-client-login {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5) !important;
+    }
+
+    .nav-client-login:hover { color: rgba(255,255,255,0.85) !important; }
 
     .nav-cta {
       background: var(--white) !important;
@@ -437,83 +445,111 @@
     #assessment .section-headline { color: var(--white); }
     #assessment .section-sub { color: rgba(255,255,255,0.6); max-width: 540px; }
 
-    .maturity-scale {
-      display: flex;
-      align-items: stretch;
-      gap: 3px;
-      margin: 48px 0;
-      max-width: 680px;
-    }
-
-    .maturity-level {
-      flex: 1;
-      padding: 20px 16px;
+    .quiz-card {
+      max-width: 640px;
+      margin: 48px 0 0;
       background: rgba(255,255,255,0.06);
-      border-top: 3px solid rgba(255,255,255,0.12);
-      transition: background 0.2s;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      padding: 36px;
     }
 
-    .maturity-level.active {
-      background: rgba(46,125,50,0.3);
-      border-top-color: var(--green-mid);
-    }
+    .quiz-question { margin-bottom: 28px; }
+    .quiz-question:last-of-type { margin-bottom: 0; }
 
-    .maturity-level-label {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.4);
-      margin-bottom: 6px;
-    }
-
-    .maturity-level.active .maturity-level-label {
-      color: rgba(232,245,233,0.7);
-    }
-
-    .maturity-level-name {
+    .quiz-label {
+      display: block;
       font-size: 14px;
       font-weight: 500;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 12px;
     }
 
-    .maturity-level.active .maturity-level-name {
-      color: var(--white);
-      font-weight: 600;
+    .quiz-select {
+      width: 100%;
+      max-width: 360px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      background: rgba(255,255,255,0.95);
+      color: var(--text);
+      border: none;
+      border-radius: 4px;
     }
 
-    .assessment-features {
+    .quiz-checklist {
       display: flex;
-      gap: 32px;
-      margin-bottom: 44px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .assessment-feature {
+    .quiz-checkbox {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
-      color: rgba(255,255,255,0.65);
-      font-size: 13.5px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+      cursor: pointer;
     }
 
-    .check-icon {
-      width: 18px;
-      height: 18px;
-      background: rgba(46,125,50,0.4);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .quiz-checkbox input {
+      accent-color: var(--green-mid);
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
       flex-shrink: 0;
     }
 
-    .check-icon svg {
-      width: 10px;
-      height: 10px;
-      stroke: rgba(232,245,233,0.9);
-      stroke-width: 2.5;
-      fill: none;
+    .quiz-checkbox-none {
+      margin-top: 4px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.6);
+    }
+
+    .quiz-hint {
+      margin-top: 10px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.45);
+      max-width: 480px;
+    }
+
+    .quiz-result {
+      margin-top: 28px;
+      padding: 18px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 1.6;
+      border-left: 3px solid transparent;
+    }
+
+    .quiz-result strong { color: var(--white); }
+
+    .quiz-result-empty {
+      background: rgba(255,255,255,0.04);
+      border-left-color: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+
+    .quiz-result-neutral {
+      background: rgba(255,255,255,0.06);
+      border-left-color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.75);
+    }
+
+    .quiz-result-warn {
+      background: rgba(46,125,50,0.18);
+      border-left-color: var(--green-mid);
+      color: rgba(255,255,255,0.85);
+    }
+
+    .quiz-result-alert {
+      background: rgba(46,125,50,0.28);
+      border-left-color: var(--green-mid);
+      color: var(--white);
     }
 
     .btn-primary-dark {
@@ -714,7 +750,7 @@
       .footer-inner { flex-direction: column; }
       .footer-contact { align-items: flex-start; }
       .footer-bottom { flex-direction: column; gap: 8px; align-items: flex-start; }
-      .maturity-scale { flex-direction: column; }
+      .quiz-card { padding: 24px; }
     }
   </style>
 </head>
@@ -729,18 +765,19 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#process">How It Works</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="https://forms.gle/hEQ4jRjju9D7Ezd9A" target="_blank" class="nav-cta">Take the Assessment</a></li>
+      <li><a href="https://app.korureporting.com/" class="nav-client-login">Client Login</a></li>
+      <li><a href="#assessment" class="nav-cta">Check Applicability</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-eyebrow">Reporting · Analytics · Sustainability</div>
-    <h1 class="hero-headline">Your data exists.<br><em>Does it tell you anything?</em></h1>
-    <p class="hero-subhead">Koru helps organizations improve how performance information is measured, understood, and communicated — from reporting processes to sustainability readiness.</p>
+    <div class="hero-eyebrow">CA SB 253 &amp; SB 261 · Climate Disclosure Compliance</div>
+    <h1 class="hero-headline">Your first climate disclosure is due Nov 10, 2026.<br><em>Most companies aren't ready.</em></h1>
+    <p class="hero-subhead">Koru helps companies approaching California's SB 253 and SB 261 revenue thresholds get ahead of mandatory climate disclosure — audit-ready emissions data and filing support, built before the deadline forces the issue.</p>
     <div class="hero-actions">
       <a href="#assessment" class="btn-primary">
-        Take the Free Assessment
+        Check if SB 253/261 applies to you
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 7h10M8 3l4 4-4 4"/>
         </svg>
@@ -761,24 +798,24 @@
   <!-- PROBLEM -->
   <section id="problem">
     <div class="section-inner">
-      <div class="eyebrow">The Problem</div>
-      <h2 class="section-headline">Most organizations have data.<br>Few have clarity.</h2>
-      <p class="section-sub">Reporting problems rarely start with technology. They start with unclear ownership, undefined metrics, and processes that were never designed to scale.</p>
+      <div class="eyebrow">The Reality</div>
+      <h2 class="section-headline">The law is already in effect.<br>Most companies just don't know it yet.</h2>
+      <p class="section-sub">SB 253 and SB 261 create mandatory climate disclosure requirements for companies doing business in California — with real deadlines, real penalties, and a state that isn't reliably telling companies they're covered.</p>
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-card-number">01</div>
-          <h3>Reporting is manual and reactive</h3>
-          <p>Leadership waits days for reports that should be available in hours. Decisions get made on instinct because the data isn't ready in time.</p>
+          <h3>You may already be in scope</h3>
+          <p>SB 253 applies at $1B+ revenue, SB 261 at $500M+ — measured as the lesser of your last two fiscal years, not just the current one. California's own outreach to qualifying companies has been unreliable, so many affected companies don't yet know they're covered.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-number">02</div>
-          <h3>Nobody owns the numbers</h3>
-          <p>Data lives in disconnected spreadsheets, owned by no one and trusted by no one. Reconciling reports takes longer than reading them.</p>
+          <h3>The deadline is closer than it looks</h3>
+          <p>SB 253's first Scope 1 and 2 disclosures are due November 10, 2026. Non-compliance penalties run up to $500,000 per year and accrue daily — on top of CARB's own annual filing fee.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-number">03</div>
-          <h3>Sustainability reporting is coming</h3>
-          <p>Customers, investors, and regulators are asking for ESG data. Most organizations don't know where to start — or whether their current systems could support it.</p>
+          <h3>Scope 3 is coming, and it's not simple</h3>
+          <p>CARB has proposed five mandatory Scope 3 categories starting in 2027. The requirements are still being finalized — the smart move is building flexible reporting infrastructure now, not scrambling to assemble it later.</p>
         </div>
       </div>
     </div>
@@ -788,8 +825,8 @@
   <section id="services">
     <div class="section-inner">
       <div class="eyebrow">What Koru Does</div>
-      <h2 class="section-headline">Reporting systems built for how your business actually works.</h2>
-      <p class="section-sub">Koru works across the full reporting stack — from process and data to KPIs, dashboards, and sustainability readiness.</p>
+      <h2 class="section-headline">A reporting system built for SB 253 and SB 261 — not generic ESG.</h2>
+      <p class="section-sub">Koru pairs hands-on consulting with a purpose-built software platform, because compliance-grade emissions data still takes real work, no matter how good the tool is.</p>
       <div class="services-grid">
         <div class="service-item">
           <div class="service-icon">
@@ -798,8 +835,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>Reporting Process Design</h3>
-            <p>Map how information currently flows through your organization. Identify where reporting breaks down, where effort is wasted, and how to build a more consistent, reliable process.</p>
+            <h3>SB 253 / SB 261 Applicability &amp; Readiness</h3>
+            <p>Determine whether and when the law applies to your company, using the actual statutory revenue thresholds and California nexus tests — not guesswork. Build a compliance roadmap against the real deadlines.</p>
           </div>
         </div>
         <div class="service-item">
@@ -810,8 +847,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>KPI Framework Design</h3>
-            <p>Define what should actually be measured, who owns each metric, and how KPIs connect to business decisions. Turn informal tracking into a structured, auditable system.</p>
+            <h3>GHG Inventory &amp; Emissions Calculator</h3>
+            <p>A GHG Protocol-aligned Scope 1, 2, and 3 calculation engine, with every number traceable to its underlying activity data, emission factor, and source — built for audit and restatement, not just a spreadsheet total.</p>
           </div>
         </div>
         <div class="service-item">
@@ -823,8 +860,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>Data Visibility & Dashboards</h3>
-            <p>Once the right metrics are defined and owned, Koru designs dashboards that give leadership real-time visibility into performance — without the manual effort.</p>
+            <h3>Disclosure Preparation &amp; Filing</h3>
+            <p>Turn your emissions inventory into an actual CARB-compliant public disclosure, with documented methodology, data sources, and exclusions at every step — the details an auditor actually checks.</p>
           </div>
         </div>
         <div class="service-item">
@@ -835,8 +872,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>Sustainability Reporting Readiness</h3>
-            <p>Assess your organization's readiness for ESG and sustainability reporting. Identify data gaps, assign ownership, and build the foundation for credible, auditable disclosures.</p>
+            <h3>Ongoing Reporting Infrastructure</h3>
+            <p>A client portal that keeps your inventory organized year over year, so next year's disclosure doesn't depend on one person's memory of how last year's numbers were built.</p>
           </div>
         </div>
       </div>
@@ -847,13 +884,13 @@
   <section id="process">
     <div class="section-inner">
       <div class="eyebrow">How It Works</div>
-      <h2 class="section-headline">From assessment to action in three steps.</h2>
-      <p class="section-sub">Koru starts with understanding — not assumptions. Every engagement begins with your organization's specific context, data, and goals.</p>
+      <h2 class="section-headline">From applicability to filed disclosure in three steps.</h2>
+      <p class="section-sub">Koru starts with your actual regulatory exposure — not assumptions. Every engagement begins with your company's specific thresholds, data, and deadline.</p>
       <div class="process-steps">
         <div class="process-step">
           <div class="step-number">1</div>
-          <div class="step-title">Take the Assessment</div>
-          <p class="step-desc">Complete the free Koru Reporting Maturity Assessment — 16 questions across four dimensions. Takes about 5 minutes.</p>
+          <div class="step-title">Check Your Exposure</div>
+          <p class="step-desc">Answer a couple of questions about revenue and California nexus to see whether SB 253 or SB 261 likely applies to you, and when.</p>
         </div>
         <div class="process-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -862,8 +899,8 @@
         </div>
         <div class="process-step">
           <div class="step-number">2</div>
-          <div class="step-title">Receive Your Report</div>
-          <p class="step-desc">Get a personalized PDF report with your maturity score, section breakdown, and tailored recommendations — automatically generated.</p>
+          <div class="step-title">Build Your Inventory, Together</div>
+          <p class="step-desc">Work with Koru to assemble Scope 1, 2, and 3 data into an audit-ready system — documented, not just calculated.</p>
         </div>
         <div class="process-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -872,8 +909,8 @@
         </div>
         <div class="process-step">
           <div class="step-number">3</div>
-          <div class="step-title">Start the Conversation</div>
-          <p class="step-desc">Use your results as the starting point for a focused conversation about where Koru can help — no obligation, no pitch.</p>
+          <div class="step-title">File With Confidence</div>
+          <p class="step-desc">Submit a reviewed, compliant disclosure before the deadline — with the infrastructure in place to repeat it next year without starting over.</p>
         </div>
       </div>
     </div>
@@ -882,58 +919,37 @@
   <!-- ASSESSMENT -->
   <section id="assessment">
     <div class="section-inner">
-      <div class="eyebrow">The Assessment</div>
-      <h2 class="section-headline">Find out where your reporting stands.</h2>
-      <p class="section-sub">The Koru Reporting Maturity Assessment evaluates your organization across four dimensions and benchmarks you against four maturity levels.</p>
+      <div class="eyebrow">Check Your Exposure</div>
+      <h2 class="section-headline">Does SB 253 or SB 261 apply to you?</h2>
+      <p class="section-sub">Answer two quick questions using your own numbers. This is a general guide, not legal advice — Koru can help you confirm your exact status.</p>
 
-      <div class="maturity-scale">
-        <div class="maturity-level">
-          <div class="maturity-level-label">Level 1</div>
-          <div class="maturity-level-name">Foundational</div>
+      <div class="quiz-card">
+        <div class="quiz-question">
+          <label class="quiz-label" for="quiz-revenue">What was the lesser of your total revenue in your last two fiscal years?</label>
+          <select id="quiz-revenue" class="quiz-select">
+            <option value="">Select a range…</option>
+            <option value="under500">Under $500 million</option>
+            <option value="500to1000">$500 million – $1 billion</option>
+            <option value="over1000">Over $1 billion</option>
+          </select>
         </div>
-        <div class="maturity-level active">
-          <div class="maturity-level-label">Level 2</div>
-          <div class="maturity-level-name">Developing</div>
+        <div class="quiz-question">
+          <label class="quiz-label">Does your company do business in California? Check anything that's true — any one is enough to count.</label>
+          <div class="quiz-checklist">
+            <label class="quiz-checkbox"><input type="checkbox" class="quiz-ca-fact" value="incorporated"> Incorporated or headquartered in California</label>
+            <label class="quiz-checkbox"><input type="checkbox" class="quiz-ca-fact" value="sales"> Meaningful sales to California customers (roughly $735K+, or 25%+ of total revenue)</label>
+            <label class="quiz-checkbox"><input type="checkbox" class="quiz-ca-fact" value="property"> Own property, or have employees on payroll, in California</label>
+            <label class="quiz-checkbox"><input type="checkbox" class="quiz-ca-fact" value="transacts"> Otherwise regularly do business in California for profit, even without an office there</label>
+            <label class="quiz-checkbox quiz-checkbox-none"><input type="checkbox" id="quiz-ca-none"> None of these — or not sure</label>
+          </div>
         </div>
-        <div class="maturity-level">
-          <div class="maturity-level-label">Level 3</div>
-          <div class="maturity-level-name">Established</div>
-        </div>
-        <div class="maturity-level">
-          <div class="maturity-level-label">Level 4</div>
-          <div class="maturity-level-name">Advanced</div>
+        <div id="quiz-result" class="quiz-result quiz-result-empty">
+          Answer both questions above to see your likely status.
         </div>
       </div>
 
-      <div class="assessment-features">
-        <div class="assessment-feature">
-          <div class="check-icon">
-            <svg viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          16 questions across 4 dimensions
-        </div>
-        <div class="assessment-feature">
-          <div class="check-icon">
-            <svg viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          Personalized PDF report
-        </div>
-        <div class="assessment-feature">
-          <div class="check-icon">
-            <svg viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          Tailored recommendations
-        </div>
-        <div class="assessment-feature">
-          <div class="check-icon">
-            <svg viewBox="0 0 10 10"><path d="M2 5l2.5 2.5L8 3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          Free — no obligation
-        </div>
-      </div>
-
-      <a href="https://forms.gle/hEQ4jRjju9D7Ezd9A" target="_blank" class="btn-primary-dark">
-        Take the Free Assessment
+      <a href="mailto:aistock@umich.edu?subject=SB%20253%2F261%20Applicability" class="btn-primary-dark" style="margin-top: 28px;">
+        Talk to us about your specific situation
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 7h10M8 3l4 4-4 4"/>
         </svg>
@@ -950,7 +966,7 @@
           <div class="about-name">Alex Istock</div>
           <div class="about-title">Founder, Koru Reporting</div>
           <p>Alex Istock is an accounting and sustainability consultant with hands-on experience advising small businesses through the Detroit Neighborhood Entrepreneurs Project. A future CPA completing a BBA at the University of Michigan's Ross School of Business, Alex brings a practical, systems-oriented approach to helping organizations measure, understand, and communicate performance.</p>
-          <p>Koru was founded on the belief that reporting problems are rarely technology problems — they're process, ownership, and clarity problems. The goal is to help organizations build reporting systems that actually support the decisions they need to make.</p>
+          <p>Koru was founded on the belief that climate disclosure isn't a technology problem — software alone doesn't remove the manual work of building an audit-ready inventory. The goal is to pair the right tools with the hands-on work SB 253 and SB 261 actually require, so companies aren't caught unprepared.</p>
           <div class="about-credentials">
             <div class="credential">
               <div class="credential-dot"></div>
@@ -984,11 +1000,12 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">Koru Reporting</div>
-        <div class="footer-tagline">Reporting · Analytics · Sustainability</div>
+        <div class="footer-tagline">CA SB 253 &amp; SB 261 Compliance</div>
       </div>
       <div class="footer-contact">
         <a href="mailto:aistock@umich.edu">aistock@umich.edu</a>
-        <a href="https://forms.gle/hEQ4jRjju9D7Ezd9A" target="_blank">Take the Assessment →</a>
+        <a href="#assessment">Check Applicability →</a>
+        <a href="https://app.korureporting.com/">Client Portal Login →</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -996,6 +1013,89 @@
       <p>korureporting.com</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var revenueEl = document.getElementById('quiz-revenue');
+      var caFacts = document.querySelectorAll('.quiz-ca-fact');
+      var caNone = document.getElementById('quiz-ca-none');
+      var resultEl = document.getElementById('quiz-result');
+
+      function caValue() {
+        var anyFact = false;
+        caFacts.forEach(function (cb) {
+          if (cb.checked) anyFact = true;
+        });
+        if (anyFact) return 'yes';
+        if (caNone.checked) return 'no';
+        return null;
+      }
+
+      function setResult(html, variant) {
+        resultEl.className = 'quiz-result quiz-result-' + variant;
+        resultEl.innerHTML = html;
+      }
+
+      function computeResult() {
+        var revenue = revenueEl.value;
+        var ca = caValue();
+
+        if (!revenue || !ca) {
+          setResult('Answer both questions above to see your likely status.', 'empty');
+          return;
+        }
+
+        if (revenue === 'under500') {
+          setResult(
+            "<strong>Neither law likely applies to you yet.</strong> Both SB 253 ($1B+) and SB 261 ($500M+) are measured on the lesser of your last two fiscal years&rsquo; revenue &mdash; worth revisiting each year as you grow.",
+            'neutral',
+          );
+        } else if (revenue === '500to1000') {
+          if (ca === 'yes') {
+            setResult(
+              "<strong>SB 261 likely applies to you.</strong> That means climate-related financial risk disclosure &mdash; currently paused nationwide due to a Ninth Circuit injunction, but expected to resume. SB 253 ($1B+ revenue) likely doesn&rsquo;t apply yet.",
+              'warn',
+            );
+          } else {
+            setResult(
+              "<strong>You&rsquo;re in SB 261&rsquo;s revenue range, but SB 261 only applies if you do business in California.</strong> The nexus test covers more than an office &mdash; worth double-checking before ruling it out.",
+              'neutral',
+            );
+          }
+        } else {
+          if (ca === 'yes') {
+            setResult(
+              "<strong>Both SB 253 and SB 261 likely apply to you.</strong> SB 253&rsquo;s first Scope 1 and 2 disclosure is due November 10, 2026.",
+              'alert',
+            );
+          } else {
+            setResult(
+              "<strong>You&rsquo;re over SB 253&rsquo;s revenue threshold, but it only applies if you do business in California.</strong> The nexus test covers more than an office &mdash; worth double-checking before ruling it out.",
+              'neutral',
+            );
+          }
+        }
+      }
+
+      revenueEl.addEventListener('change', computeResult);
+
+      caFacts.forEach(function (cb) {
+        cb.addEventListener('change', function () {
+          if (cb.checked) caNone.checked = false;
+          computeResult();
+        });
+      });
+
+      caNone.addEventListener('change', function () {
+        if (caNone.checked) {
+          caFacts.forEach(function (cb) {
+            cb.checked = false;
+          });
+        }
+        computeResult();
+      });
+    })();
+  </script>
 
 </body>
 </html>
