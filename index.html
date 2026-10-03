@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koru Reporting — CA SB 253 &amp; SB 261 Climate Disclosure Compliance</title>
+  <title>Koru Reporting — California SB 253 Climate Disclosure &amp; GHG Reporting</title>
+  <meta name="description" content="Koru Reporting helps companies covered by California's SB 253 build assurance-ready Scope 1 and 2 emissions data and prepare their climate disclosure.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -378,6 +379,86 @@
       color: var(--text-secondary);
     }
 
+    /* ── OFFERS ──────────────────────────────────────────────────── */
+    #offers { background: var(--white); }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 56px;
+    }
+
+    .offer-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer-list {
+      list-style: none;
+      margin: 20px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .offer-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .offer-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+    }
+
+    .offer-fee {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      color: var(--green);
+    }
+
+    .offers-note {
+      margin-top: 32px;
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--text-light);
+      max-width: 680px;
+    }
+
+    .btn-offers {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 28px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-offers:hover {
+      background: var(--green-mid);
+      transform: translateY(-1px);
+    }
+
     /* ── HOW IT WORKS ────────────────────────────────────────────── */
     #process { background: var(--white); }
 
@@ -741,6 +822,7 @@
       #hero { padding: 100px 24px 72px; }
       .problem-grid { grid-template-columns: 1fr; gap: 24px; }
       .services-grid { grid-template-columns: 1fr; }
+      .offers-grid { grid-template-columns: 1fr; gap: 24px; }
       .process-steps { grid-template-columns: 1fr; gap: 32px; }
       .process-arrow { display: none; }
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -772,9 +854,9 @@
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-eyebrow">CA SB 253 &amp; SB 261 · Climate Disclosure Compliance</div>
+    <div class="hero-eyebrow">California Climate Disclosure · SB 253 is in effect now</div>
     <h1 class="hero-headline">Your first climate disclosure is due Nov 10, 2026.<br><em>Most companies aren't ready.</em></h1>
-    <p class="hero-subhead">Koru helps companies approaching California's SB 253 and SB 261 revenue thresholds get ahead of mandatory climate disclosure — audit-ready emissions data and filing support, built before the deadline forces the issue.</p>
+    <p class="hero-subhead">Koru helps companies covered by California's SB 253 build assurance-ready emissions data and prepare their first disclosure — before the deadline forces the issue.</p>
     <div class="hero-actions">
       <a href="#assessment" class="btn-primary">
         Check if SB 253/261 applies to you
@@ -800,17 +882,17 @@
     <div class="section-inner">
       <div class="eyebrow">The Reality</div>
       <h2 class="section-headline">The law is already in effect.<br>Most companies just don't know it yet.</h2>
-      <p class="section-sub">SB 253 and SB 261 create mandatory climate disclosure requirements for companies doing business in California — with real deadlines, real penalties, and a state that isn't reliably telling companies they're covered.</p>
+      <p class="section-sub">SB 253 creates mandatory climate disclosure requirements for companies doing business in California — with real deadlines, real penalties, and a state that isn't reliably telling companies they're covered.</p>
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-card-number">01</div>
           <h3>You may already be in scope</h3>
-          <p>SB 253 applies at $1B+ revenue, SB 261 at $500M+ — measured as the lesser of your last two fiscal years, not just the current one. California's own outreach to qualifying companies has been unreliable, so many affected companies don't yet know they're covered.</p>
+          <p>SB 253 applies at $1B+ revenue, SB 261 at $500M+ (SB 261 is currently paused by a Ninth Circuit injunction) — measured as the lesser of your last two fiscal years, not just the current one. California's own outreach to qualifying companies has been unreliable, so many affected companies don't yet know they're covered.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-number">02</div>
           <h3>The deadline is closer than it looks</h3>
-          <p>SB 253's first Scope 1 and 2 disclosures are due November 10, 2026. Non-compliance penalties run up to $500,000 per year and accrue daily — on top of CARB's own annual filing fee.</p>
+          <p>SB 253's first Scope 1 and 2 disclosures are due November 10, 2026. Penalties can reach $500,000 per reporting year, on top of CARB's annual filing fee. CARB has said it won't penalize good-faith first filings, but the numbers you file now are the baseline that assurance will test in later cycles.</p>
         </div>
         <div class="problem-card">
           <div class="problem-card-number">03</div>
@@ -825,7 +907,7 @@
   <section id="services">
     <div class="section-inner">
       <div class="eyebrow">What Koru Does</div>
-      <h2 class="section-headline">A reporting system built for SB 253 and SB 261 — not generic ESG.</h2>
+      <h2 class="section-headline">Built for California climate disclosure — not generic ESG.</h2>
       <p class="section-sub">Koru pairs hands-on consulting with a purpose-built software platform, because compliance-grade emissions data still takes real work, no matter how good the tool is.</p>
       <div class="services-grid">
         <div class="service-item">
@@ -847,8 +929,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>GHG Inventory &amp; Emissions Calculator</h3>
-            <p>A GHG Protocol-aligned Scope 1, 2, and 3 calculation engine, with every number traceable to its underlying activity data, emission factor, and source — built for audit and restatement, not just a spreadsheet total.</p>
+            <h3>GHG Inventory</h3>
+            <p>A GHG Protocol-aligned Scope 1 and 2 inventory, with every number traced to its source document, emission factor, and method — built so it can be assured and restated. Scope 3 support is being built for the 2027 cycle.</p>
           </div>
         </div>
         <div class="service-item">
@@ -860,8 +942,8 @@
             </svg>
           </div>
           <div class="service-content">
-            <h3>Disclosure Preparation &amp; Filing</h3>
-            <p>Turn your emissions inventory into an actual CARB-compliant public disclosure, with documented methodology, data sources, and exclusions at every step — the details an auditor actually checks.</p>
+            <h3>Disclosure Preparation</h3>
+            <p>Turn your inventory into the disclosure your company files with CARB, with documented methodology, data sources, and exclusions — the details an assurance provider will check.</p>
           </div>
         </div>
         <div class="service-item">
@@ -877,6 +959,50 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section id="offers">
+    <div class="section-inner">
+      <div class="eyebrow">Engagements</div>
+      <h2 class="section-headline">Two ways to work with Koru</h2>
+      <div class="offers-grid">
+        <div class="problem-card offer-card">
+          <div class="problem-card-number">For the November 10, 2026 deadline</div>
+          <h3>Filing Sprint</h3>
+          <p>For companies that have started their first filing and need help finishing it. 2–3 weeks.</p>
+          <ul class="offer-list">
+            <li>Scope and boundary confirmation</li>
+            <li>Scope 1 and 2 calculation review against the GHG Protocol</li>
+            <li>Data gap log with estimation methods</li>
+            <li>Methodology memo written for future assurance</li>
+            <li>Walkthrough with your team</li>
+          </ul>
+          <div class="offer-fee">Fixed fee, agreed before work starts</div>
+        </div>
+        <div class="problem-card offer-card">
+          <div class="problem-card-number">For your next filing</div>
+          <h3>Readiness Engagement</h3>
+          <p>For companies that missed the first filing, filed rough numbers, or want a repeatable process before assurance applies. 6–8 weeks.</p>
+          <ul class="offer-list">
+            <li>Data inventory and assembly map</li>
+            <li>Data ownership matrix</li>
+            <li>Scope 1 and 2 inventory traceable to source documents</li>
+            <li>Process documentation</li>
+            <li>Assurance readiness review</li>
+            <li>Post-filing review and next-cycle check-in included</li>
+          </ul>
+          <div class="offer-fee">Fixed fee, agreed before work starts</div>
+        </div>
+      </div>
+      <p class="offers-note">Koru prepares and advises; it does not provide assurance or attest services, and your company files its own disclosure. Fees are scoped to your facilities and data, and agreed upfront. Pricing details are available on request.</p>
+      <a href="mailto:aistock@umich.edu?subject=SB%20253%2F261%20Applicability" class="btn-offers">
+        Start with a free 30-minute applicability check
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7h10M8 3l4 4-4 4"/>
+        </svg>
+      </a>
     </div>
   </section>
 
@@ -900,7 +1026,7 @@
         <div class="process-step">
           <div class="step-number">2</div>
           <div class="step-title">Build Your Inventory, Together</div>
-          <p class="step-desc">Work with Koru to assemble Scope 1, 2, and 3 data into an audit-ready system — documented, not just calculated.</p>
+          <p class="step-desc">Work with Koru to assemble your Scope 1 and 2 data (and Scope 3 as it phases in) into an assurance-ready system — documented, not just calculated.</p>
         </div>
         <div class="process-arrow">
           <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -909,8 +1035,8 @@
         </div>
         <div class="process-step">
           <div class="step-number">3</div>
-          <div class="step-title">File With Confidence</div>
-          <p class="step-desc">Submit a reviewed, compliant disclosure before the deadline — with the infrastructure in place to repeat it next year without starting over.</p>
+          <div class="step-title">File Prepared</div>
+          <p class="step-desc">Submit a reviewed, well-documented disclosure before the deadline — with the infrastructure in place to repeat it next year without starting over.</p>
         </div>
       </div>
     </div>
@@ -965,16 +1091,12 @@
         <div class="about-text">
           <div class="about-name">Alex Istock</div>
           <div class="about-title">Founder, Koru Reporting</div>
-          <p>Alex Istock is an accounting and sustainability consultant with hands-on experience advising small businesses through the Detroit Neighborhood Entrepreneurs Project. A future CPA completing a BBA at the University of Michigan's Ross School of Business, Alex brings a practical, systems-oriented approach to helping organizations measure, understand, and communicate performance.</p>
-          <p>Koru was founded on the belief that climate disclosure isn't a technology problem — software alone doesn't remove the manual work of building an audit-ready inventory. The goal is to pair the right tools with the hands-on work SB 253 and SB 261 actually require, so companies aren't caught unprepared.</p>
+          <p>Alex Istock is an accounting and sustainability consultant with hands-on experience advising small businesses through the Detroit Neighborhood Entrepreneurs Project. A future CPA completing a BBA at the University of Michigan's Ross School of Business, Alex brings a practical, systems-oriented approach to helping organizations measure, understand, and communicate performance. Outside of Koru, Alex competes for the University of Michigan men's gymnastics team, the 2025 NCAA national champions.</p>
+          <p>Koru was founded on the belief that climate disclosure isn't a technology problem — software alone doesn't remove the manual work of building an assurance-ready inventory. The goal is to pair the right tools with the hands-on work SB 253 actually requires, so companies aren't caught unprepared.</p>
           <div class="about-credentials">
             <div class="credential">
               <div class="credential-dot"></div>
               Accounting Consultant — Detroit Neighborhood Entrepreneurs Project
-            </div>
-            <div class="credential">
-              <div class="credential-dot"></div>
-              Upcoming Audit Internship — Ernst & Young
             </div>
             <div class="credential">
               <div class="credential-dot"></div>
@@ -1000,7 +1122,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">Koru Reporting</div>
-        <div class="footer-tagline">CA SB 253 &amp; SB 261 Compliance</div>
+        <div class="footer-tagline">California Climate Disclosure Compliance</div>
       </div>
       <div class="footer-contact">
         <a href="mailto:aistock@umich.edu">aistock@umich.edu</a>
@@ -1053,7 +1175,7 @@
         } else if (revenue === '500to1000') {
           if (ca === 'yes') {
             setResult(
-              "<strong>SB 261 likely applies to you.</strong> That means climate-related financial risk disclosure &mdash; currently paused nationwide due to a Ninth Circuit injunction, but expected to resume. SB 253 ($1B+ revenue) likely doesn&rsquo;t apply yet.",
+              "<strong>SB 261 likely applies to you.</strong> That means climate-related financial risk disclosure. SB 253 ($1B+ revenue) likely doesn&rsquo;t apply yet. Note: SB 261 is currently paused by a Ninth Circuit injunction. Koru tracks it and can help you prepare if it takes effect.",
               'warn',
             );
           } else {
@@ -1065,7 +1187,7 @@
         } else {
           if (ca === 'yes') {
             setResult(
-              "<strong>Both SB 253 and SB 261 likely apply to you.</strong> SB 253&rsquo;s first Scope 1 and 2 disclosure is due November 10, 2026.",
+              "<strong>Both SB 253 and SB 261 likely apply to you.</strong> SB 253&rsquo;s first Scope 1 and 2 disclosure is due November 10, 2026. Note: SB 261 is currently paused by a Ninth Circuit injunction. Koru tracks it and can help you prepare if it takes effect.",
               'alert',
             );
           } else {
